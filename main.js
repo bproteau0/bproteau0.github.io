@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import GUI from 'lil-gui';
+// import GUI from 'lil-gui';
 
 //  -- three.js scene settings -- 
 const scene = new THREE.Scene();
@@ -21,7 +21,7 @@ const clock = new THREE.Clock();
 
 const mouse = new THREE.Vector3(0, 0, 0);
 
-const gui = new GUI();
+// const gui = new GUI();
 const boid_settings = {
     vis_range : 5,
     near_range : 2,
@@ -30,12 +30,12 @@ const boid_settings = {
     aligning_strength : 0.01,
     max_speed : 2.1
 };
-gui.add(boid_settings, "vis_range", 3, 7);
-gui.add(boid_settings, "near_range", 1, boid_settings["vis_range"])
-gui.add(boid_settings, "grouping_strength", 0.9, 1);
-gui.add(boid_settings, "separation_strength", 0.005, 0.015);
-gui.add(boid_settings, "aligning_strength", 0.005, 0.015);
-gui.add(boid_settings, "max_speed", 1, 5);
+// gui.add(boid_settings, "vis_range", 3, 7);
+// gui.add(boid_settings, "near_range", 1, boid_settings["vis_range"])
+// gui.add(boid_settings, "grouping_strength", 0.9, 1);
+// gui.add(boid_settings, "separation_strength", 0.005, 0.015);
+// gui.add(boid_settings, "aligning_strength", 0.005, 0.015);
+// gui.add(boid_settings, "max_speed", 1, 5);
 
 function directionTo(to, from) {
     return to.clone().add(from.clone().negate()).normalize();
