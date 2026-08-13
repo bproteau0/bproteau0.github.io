@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
+		<title>bproteau's Personal Site</title>
+		<style>
+:root {
+	--color-text : rgb(255 255 255);
+	--color-background : rgb(8 12 14);
+	--color-background-secondary : rgb(50 51 58);
+	--color-primary : rgb(208 104 76);
+	--color-secondary : rgb(223 212 202);
+	--color-tertiary : rgb(236 234 223);
+}
 
+body {
+	font-family: Optima, Candara, Verdana, Arial;
+	background: var(--color-background);
+}
+a:link {
+	color : var(--color-tertiary);
+	background-color : transparent;
+	transition : background-color 0.2s 0s;
+}
+a:visited {
+	color : var(--color-secondary);
+}
+a:hover {
+	background : var(--color-primary);
+}
 
-        <script type="importmap">
-        {
-            "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js",
-                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/",
-                <!-- "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.21.0/dist/lil-gui.umd.min.js" -->
-            }
-        }
-        </script>
+details {
+	
+}
 
-        <title>
-            Hello!
-        </title>
-    </head>
-    <body id="main_body">
-        <script type="module" src="/main.js"></script>
-    </body>
+.content {
+	color : var(--color-text);
+	background : var(--color-background-secondary);
+	padding : 1.0em;
+	margin : 1.0em;
+	border : solid 0.1em;
+	border-radius : 0.1em;
+	border-color : var(--color-primary);
+}
+
+.container {
+	display : grid;
+	align-items : center;
+	justify-content : stretch;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<h1>Hello! Welcome to Brandon Proteau's personal site.</h1> 
+				<menu>
+					<li><a href="#About Me">About me</a></li>
+					<li><a href="#My Work">My work</a></li>
+				</menu>
+			</div>
+			<details id="About Me" class="content">
+				<summary><h2 style="display:inline-flex">About me</h2></summary>
+				My name is Brandon and I typically will use the displayname <tt>bproteau</tt>.
+
+				Some fields of study I like include
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Computer_graphics">Graphics Programming</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Discrete_mathematics">Discrete Mathematics</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Numerical_method">Numerical Methods</a> and <a href="https://en.wikipedia.org/wiki/Computer_simulation">Simulation</a><ul>
+						<li>Particularly, <a href="https://en.wikipedia.org/wiki/Computer_simulation">cellular automata</a>, agent based simulation, and other <a href="https://en.wikipedia.org/wiki/Chaos_theory#Chaotic_dynamics">chaotic systems</a></li> 
+						</ul>
+					</li>
+				</ul>
+				<details id="Links" class="content">
+					<summary><b>Links to my profiles</b></summary>
+					<ul>
+						<li><a href="https://github.com/bproteau0/" target="_blank">GitHub</a></li>
+						<li><a href="" target="_blank">Personal website</a></li>
+						<li>Discord : <tt>bproteau</tt></li>
+						<li><a href="https://goodreads.com/user/show/201862827-brandon-proteau" target="_blank">Goodreads</a></li>
+						<li><a href="https://linkedin.com/in/brandon-proteau/" target="_blank">LinkedIn</a></li>
+					</ul>
+				</details>
+				<details class="content">
+					<summary><b>About this site</b></summary>
+					This site was primarily made to practice using (Neo)Vim as well as learn CSS and HTML. For this page, I opted for a static HTML file with no embeded Javascript. 
+				</details>
+			</details>
+			<details id="My Work" class="content">
+				<summary><h2 style="display:inline-flex">My work</h2></summary>
+				Currently, I am a student at <a href="https://www.wpi.edu/">Worcester Polytechnic Institute</a> working towards bachelors of science and master of science degrees in computer science, both expected to be completed in May of 2027.  
+			</details>
+		</div>
+	</body>
 </html>
